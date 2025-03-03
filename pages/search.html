@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - Marketplace</title>
+    <link rel="stylesheet" href="../CSS/Home.css">
+    <link rel="stylesheet" href="../CSS/search.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <!-- ...existing header code... -->
+    </header>
+
+    <main class="search-page">
+        <aside class="filters-sidebar">
+            <div class="filters-header">
+                <h3>Filters</h3>
+                <button class="clear-filters">Clear All</button>
+            </div>
+
+            <div class="filter-section">
+                <h4>Categories</h4>
+                <div class="filter-options">
+                    <label><input type="checkbox" value="electronics"> Electronics</label>
+                    <label><input type="checkbox" value="vehicles"> Vehicles</label>
+                    <label><input type="checkbox" value="property"> Property</label>
+                    <label><input type="checkbox" value="furniture"> Furniture</label>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h4>Location</h4>
+                <select class="location-select">
+                    <option value="">All Locations</option>
+                    <option value="cape-town">Cape Town</option>
+                    <option value="johannesburg">Johannesburg</option>
+                    <option value="durban">Durban</option>
+                    <option value="pretoria">Pretoria</option>
+                </select>
+            </div>
+
+            <div class="filter-section">
+                <h4>Price Range</h4>
+                <div class="price-inputs">
+                    <input type="number" placeholder="Min" class="price-min">
+                    <input type="number" placeholder="Max" class="price-max">
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h4>Condition</h4>
+                <div class="filter-options">
+                    <label><input type="radio" name="condition" value="new"> New</label>
+                    <label><input type="radio" name="condition" value="used"> Used</label>
+                    <label><input type="radio" name="condition" value="any" checked> Any</label>
+                </div>
+            </div>
+        </aside>
+
+        <section class="search-results">
+            <div class="results-header">
+                <div class="results-count">
+                    <p>Showing <span id="resultsCount">0</span> results</p>
+                </div>
+                <div class="sort-options">
+                    <select id="sortSelect">
+                        <option value="newest">Newest First</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="popular">Most Popular</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="listings-grid" id="searchResults">
+                <!-- Results will be populated by JavaScript -->
+            </div>
+
+            <div class="loading-spinner" id="loadingSpinner">
+                <div class="spinner"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/mockData.js"></script>
+    <script src="../js/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Neutron Find</title>
+    <link rel="stylesheet" href="../CSS/Home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="../js/sidebar.js" defer></script>
+    <script src="../js/modal.js" defer></script>
+    <script src="../js/auth.js" defer></script>
+</head>
+<body>
+    <!-- Sidebar Toggle Button -->
+    <button class="sidebar-toggle" id="sidebarToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <button class="close-sidebar" id="closeSidebar">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="user-account">
+                <div class="user-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="user-info">
+                    <div class="user-name">Welcome</div>
+                    <div class="user-status">Sign in or Register</div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="sidebar-menu">
+            <li>
+                <a href="Home.html" class="menu-item">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="favorites.html" class="menu-item">
+                    <i class="fas fa-heart"></i>
+                    <span>My Favorites</span>
+                </a>
+            </li>
+            <li>
+                <a href="my-ads.html" class="menu-item">
+                    <i class="fas fa-tag"></i>
+                    <span>My Ads</span>
+                </a>
+            </li>
+            <li>
+                <a href="messages.html" class="menu-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>Messages</span>
+                </a>
+            </li>
+            <li>
+                <a href="settings.html" class="menu-item active">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </li>
+            <li>
+                <a href="help.html" class="menu-item">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Help & Support</span>
+                </a>
+            </li>
+            <li>
+                <a href="#fiction" class="menu-item">
+                    <i class="fas fa-book"></i>
+                    <span>Fiction</span>
+                </a>
+            </li>
+            <li>
+                <a href="categories.html" class="menu-item">
+                    <i class="fas fa-th-large"></i>
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="trending.html" class="menu-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Trending</span>
+                </a>
+            </li>
+            <li>
+                <a href="saved-searches.html" class="menu-item">
+                    <i class="fas fa-search"></i>
+                    <span>Saved Searches</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+        <header>
+            <div class="logo">Neutron Find</div>
+            <div class="header-buttons">
+                <button class="login-btn" id="loginBtn">Login</button>
+                <button class="post-ad-btn">Post Ad</button>
+                <button class="logout-btn" id="logoutBtn" style="display: none;">Logout</button>
+            </div>
+        </header>
+
+        <section class="settings-section">
+            <div class="settings-container">
+                <!-- Settings Navigation -->
+                <div class="settings-nav">
+                    <h2>Settings</h2>
+                    <ul class="settings-menu">
+                        <li class="active">
+                            <a href="#profile">
+                                <i class="fas fa-user"></i>
+                                Profile Settings
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#account">
+                                <i class="fas fa-shield-alt"></i>
+                                Account Security
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#notifications">
+                                <i class="fas fa-bell"></i>
+                                Notifications
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#privacy">
+                                <i class="fas fa-lock"></i>
+                                Privacy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#preferences">
+                                <i class="fas fa-sliders-h"></i>
+                                Preferences
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#billing">
+                                <i class="fas fa-credit-card"></i>
+                                Billing & Payments
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Settings Content -->
+                <div class="settings-content">
+                    <!-- Profile Settings Section -->
+                    <div class="settings-panel active" id="profile">
+                        <h3>Profile Settings</h3>
+                        <form class="settings-form">
+                            <div class="profile-photo">
+                                <div class="photo-preview">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <button type="button" class="change-photo-btn">Change Photo</button>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" placeholder="Enter your full name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" placeholder="Enter your email">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" placeholder="Enter your phone number">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="location">Location</label>
+                                <input type="text" id="location" placeholder="Enter your location">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bio">Bio</label>
+                                <textarea id="bio" placeholder="Tell us about yourself"></textarea>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="button" class="cancel-btn">Cancel</button>
+                                <button type="submit" class="save-btn">Save Changes</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Fiction Settings Section -->
+                    <div class="settings-panel" id="fiction-panel">
+                        <h3>Fiction Settings</h3>
+                        <div class="settings-form">
+                            <div class="form-group">
+                                <label>Preferred Genre</label>
+                                <select class="fiction-select">
+                                    <option value="">Select Genre</option>
+                                    <option value="fantasy">Fantasy</option>
+                                    <option value="scifi">Science Fiction</option>
+                                    <option value="mystery">Mystery</option>
+                                    <option value="romance">Romance</option>
+                                    <option value="thriller">Thriller</option>
+                                    <option value="horror">Horror</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Reading Level</label>
+                                <select class="fiction-select">
+                                    <option value="">Select Reading Level</option>
+                                    <option value="beginner">Beginner</option>
+                                    <option value="intermediate">Intermediate</option>
+                                    <option value="advanced">Advanced</option>
+                                    <option value="expert">Expert</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Content Preferences</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="content_pref" value="violence"> Show Violence
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="content_pref" value="language"> Show Strong Language
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="content_pref" value="adult"> Show Adult Content
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Favorite Authors</label>
+                                <textarea placeholder="Enter your favorite authors (one per line)"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Reading Goals</label>
+                                <div class="reading-goals">
+                                    <input type="number" min="1" placeholder="Books per month" class="books-goal">
+                                    <input type="number" min="1" placeholder="Pages per day" class="pages-goal">
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button class="cancel-btn">Cancel</button>
+                                <button class="save-btn">Save Changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>About Neutron Find</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Help & Support</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Safety Tips</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Popular Categories</h4>
+                    <ul>
+                        <li><a href="#">Cars</a></li>
+                        <li><a href="#">Property</a></li>
+                        <li><a href="#">Jobs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="https://www.instagram.com/neutronfind/">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                2025 Neutron Find. All rights reserved.
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

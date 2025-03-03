@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Ads - Marketplace</title>
+    <link rel="stylesheet" href="../CSS/Home.css">
+    <link rel="stylesheet" href="../CSS/saved-ads.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="sidebar-open">
+    <!-- Sidebar -->
+    <aside class="sidebar active">
+        <!-- ...existing sidebar code... -->
+        <nav class="nav-section">
+            <h4>Menu</h4>
+            <ul>
+                <li><a href="home.html"><i class="fas fa-home"></i><span>Home</span></a></li>
+                <li><a href="my-ads.html"><i class="fas fa-list"></i><span>My Ads</span></a></li>
+                <li class="active"><a href="saved-ads.html"><i class="fas fa-heart"></i><span>Saved</span></a></li>
+                <li><a href="messages.html"><i class="fas fa-message"></i><span>Messages</span></a></li>
+                <li><a href="marketplace.html"><i class="fas fa-store"></i><span>Marketplace</span></a></li>
+                <li><a href="settings.html"><i class="fas fa-cog"></i><span>Settings</span></a></li>
+                <li><a href="help-center.html"><i class="fas fa-question-circle"></i><span>Help Center</span></a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="saved-ads-content">
+        <div class="page-header">
+            <h1>Saved Ads</h1>
+            <div class="view-options">
+                <button class="grid-view active"><i class="fas fa-th-large"></i></button>
+                <button class="list-view"><i class="fas fa-list"></i></button>
+            </div>
+        </div>
+
+        <div class="listings-grid">
+            <!-- Saved items will be populated here -->
+        </div>
+
+        <div class="empty-state" id="emptyState">
+            <i class="fas fa-heart-broken"></i>
+            <h2>No Saved Ads</h2>
+            <p>Items you save will appear here</p>
+            <a href="marketplace.html" class="browse-btn">Browse Marketplace</a>
+        </div>
+    </main>
+
+    <script src="../js/saved-ads.js"></script>
+</body>
+</html>

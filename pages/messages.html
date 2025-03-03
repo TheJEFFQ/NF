@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages - Neutron Find</title>
+    <link rel="stylesheet" href="../CSS/Home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="../js/sidebar.js" defer></script>
+    <script src="../js/modal.js" defer></script>
+    <script src="../js/auth.js" defer></script>
+</head>
+<body>
+    <!-- Sidebar Toggle Button -->
+    <button class="sidebar-toggle" id="sidebarToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <button class="close-sidebar" id="closeSidebar">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="user-account">
+                <div class="user-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="user-info">
+                    <div class="user-name">Welcome</div>
+                    <div class="user-status">Sign in or Register</div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="sidebar-menu">
+            <li>
+                <a href="Home.html" class="menu-item">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="favorites.html" class="menu-item">
+                    <i class="fas fa-heart"></i>
+                    <span>My Favorites</span>
+                </a>
+            </li>
+            <li>
+                <a href="my-ads.html" class="menu-item">
+                    <i class="fas fa-tag"></i>
+                    <span>My Ads</span>
+                </a>
+            </li>
+            <li>
+                <a href="messages.html" class="menu-item active">
+                    <i class="fas fa-envelope"></i>
+                    <span>Messages</span>
+                </a>
+            </li>
+            <li>
+                <a href="settings.html" class="menu-item">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </li>
+            <li>
+                <a href="help.html" class="menu-item">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Help & Support</span>
+                </a>
+            </li>
+            <li>
+                <a href="categories.html" class="menu-item">
+                    <i class="fas fa-th-large"></i>
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="trending.html" class="menu-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Trending</span>
+                </a>
+            </li>
+            <li>
+                <a href="saved-searches.html" class="menu-item">
+                    <i class="fas fa-search"></i>
+                    <span>Saved Searches</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+        <header>
+            <div class="logo">Neutron Find</div>
+            <div class="header-buttons">
+                <button class="login-btn" id="loginBtn">Login</button>
+                <button class="post-ad-btn">Post Ad</button>
+                <button class="logout-btn" id="logoutBtn" style="display: none;">Logout</button>
+            </div>
+        </header>
+
+        <section class="messages-section">
+            <div class="messages-container">
+                <!-- Messages List -->
+                <div class="messages-list">
+                    <div class="messages-header">
+                        <h2>Messages</h2>
+                        <div class="messages-search">
+                            <input type="text" placeholder="Search messages...">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="no-messages">
+                        <i class="fas fa-envelope"></i>
+                        <h3>No Messages Yet</h3>
+                        <p>When you have messages, they will appear here</p>
+                    </div>
+                </div>
+
+                <!-- Message Content -->
+                <div class="message-content">
+                    <div class="start-conversation">
+                        <i class="fas fa-comments"></i>
+                        <h3>Select a conversation</h3>
+                        <p>Choose a conversation from the list or start a new one</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>About Neutron Find</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Help & Support</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Safety Tips</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Popular Categories</h4>
+                    <ul>
+                        <li><a href="#">Cars</a></li>
+                        <li><a href="#">Property</a></li>
+                        <li><a href="#">Jobs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="https://www.instagram.com/neutronfind/">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                2025 Neutron Find. All rights reserved.
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

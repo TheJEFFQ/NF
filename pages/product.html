@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Neutron Find</title>
+    <link rel="stylesheet" href="../CSS/Home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="../js/sidebar.js" defer></script>
+    <script src="../js/modal.js" defer></script>
+    <script src="../js/auth.js" defer></script>
+    <script src="../js/product.js" defer></script>
+</head>
+<body>
+    <!-- Sidebar Toggle Button -->
+    <button class="sidebar-toggle" id="sidebarToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <button class="close-sidebar" id="closeSidebar">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="user-account">
+                <div class="user-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="user-info">
+                    <div class="user-name">Welcome</div>
+                    <div class="user-status">Sign in or Register</div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="sidebar-menu">
+            <li>
+                <a href="Home.html" class="menu-item">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="favorites.html" class="menu-item">
+                    <i class="fas fa-heart"></i>
+                    <span>My Favorites</span>
+                </a>
+            </li>
+            <li>
+                <a href="my-ads.html" class="menu-item">
+                    <i class="fas fa-tag"></i>
+                    <span>My Ads</span>
+                </a>
+            </li>
+            <li>
+                <a href="messages.html" class="menu-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>Messages</span>
+                </a>
+            </li>
+            <li>
+                <a href="settings.html" class="menu-item">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </li>
+            <li>
+                <a href="help.html" class="menu-item">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Help & Support</span>
+                </a>
+            </li>
+            <li>
+                <a href="categories.html" class="menu-item">
+                    <i class="fas fa-th-large"></i>
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="trending.html" class="menu-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Trending</span>
+                </a>
+            </li>
+            <li>
+                <a href="saved-searches.html" class="menu-item">
+                    <i class="fas fa-search"></i>
+                    <span>Saved Searches</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+        <header>
+            <div class="logo">Neutron Find</div>
+            <div class="header-buttons">
+                <button class="login-btn" id="loginBtn">Login</button>
+                <button class="post-ad-btn">Post Ad</button>
+                <button class="logout-btn" id="logoutBtn" style="display: none;">Logout</button>
+            </div>
+        </header>
+
+        <section class="product-details-section">
+            <div class="product-container">
+                <!-- Product Gallery -->
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img src="" alt="Product Image" id="mainImage">
+                        <button class="gallery-nav prev">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="gallery-nav next">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="thumbnail-list" id="thumbnailList">
+                        <!-- Thumbnails will be added dynamically -->
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-info">
+                    <div class="product-header">
+                        <h1 id="productTitle">Product Title</h1>
+                        <div class="product-actions">
+                            <button class="action-btn favorite">
+                                <i class="far fa-heart"></i>
+                                <span>Add to Favorites</span>
+                            </button>
+                            <button class="action-btn share">
+                                <i class="fas fa-share-alt"></i>
+                                <span>Share</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-price-section">
+                        <div class="price" id="productPrice">R0.00</div>
+                        <div class="price-info">
+                            <span class="negotiable">Negotiable</span>
+                            <span class="condition">Condition: <span id="productCondition">New</span></span>
+                        </div>
+                    </div>
+
+                    <div class="product-description">
+                        <h2>Description</h2>
+                        <p id="productDescription">Loading description...</p>
+                    </div>
+
+                    <div class="product-details-list">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Location:</span>
+                            <strong id="productLocation">Loading...</strong>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Posted:</span>
+                            <strong id="productDate">Loading...</strong>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-eye"></i>
+                            <span>Views:</span>
+                            <strong id="productViews">0</strong>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-tag"></i>
+                            <span>Category:</span>
+                            <strong id="productCategory">Loading...</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seller Info -->
+                <div class="seller-info">
+                    <h2>Seller Information</h2>
+                    <div class="seller-profile">
+                        <div class="seller-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="seller-details">
+                            <h3 id="sellerName">Seller Name</h3>
+                            <p>Member since <span id="memberSince">January 2024</span></p>
+                            <div class="seller-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(4.0)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="seller-actions">
+                        <button class="contact-seller-btn">
+                            <i class="fas fa-envelope"></i>
+                            Contact Seller
+                        </button>
+                        <button class="view-phone-btn">
+                            <i class="fas fa-phone"></i>
+                            Show Phone Number
+                        </button>
+                    </div>
+                    <div class="seller-safety">
+                        <i class="fas fa-shield-alt"></i>
+                        <p>Safety Tip: Meet seller at a safe location</p>
+                    </div>
+                </div>
+
+                <!-- Similar Products -->
+                <div class="similar-products">
+                    <h2>Similar Products</h2>
+                    <div class="products-grid">
+                        <!-- Similar products will be added dynamically -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Add Contact Seller Modal -->
+        <div class="modal" id="contactModal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Contact Seller</h2>
+                <div class="seller-contact-info">
+                    <div class="seller-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="seller-details">
+                        <h3 id="modalSellerName">Seller Name</h3>
+                        <p>About: <span id="modalProductTitle">Product Title</span></p>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="messageText">Your Message</label>
+                        <textarea id="messageText" placeholder="Hi, is this item still available?" required></textarea>
+                    </div>
+                    <button type="submit" class="send-message-btn">Send Message</button>
+                    <p class="form-note">* You'll be notified when the seller responds</p>
+                </form>
+            </div>
+        </div>
+
+        <!-- Add Phone Number Modal -->
+        <div class="modal" id="phoneModal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Seller's Contact</h2>
+                <div class="phone-number-container">
+                    <div class="phone-number" id="sellerPhone">
+                        <i class="fas fa-phone"></i>
+                        <span>+27 ** *** ****</span>
+                    </div>
+                    <button class="reveal-number-btn" id="revealNumberBtn">Show Number</button>
+                </div>
+                <div class="safety-tips">
+                    <h3>Safety Tips</h3>
+                    <ul>
+                        <li><i class="fas fa-shield-alt"></i> Meet in a safe, public location</li>
+                        <li><i class="fas fa-eye"></i> Inspect the item before payment</li>
+                        <li><i class="fas fa-exclamation-triangle"></i> Never send money in advance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>About Neutron Find</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Help & Support</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Safety Tips</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Popular Categories</h4>
+                    <ul>
+                        <li><a href="#">Cars</a></li>
+                        <li><a href="#">Property</a></li>
+                        <li><a href="#">Jobs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="https://www.instagram.com/neutronfind/">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                2025 Neutron Find. All rights reserved.
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

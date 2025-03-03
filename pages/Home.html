@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neutron Find - South Africa's Marketplace</title>
+    <link rel="stylesheet" href="../CSS/Home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="../js/sidebar.js" defer></script>
+    <script src="../js/modal.js" defer></script>
+    <script src="../js/auth.js" defer></script>
+    <script src="../js/search.js" defer></script>
+</head>
+<body>
+    <!-- Sidebar Toggle Button -->
+    <button class="sidebar-toggle" id="sidebarToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <button class="close-sidebar" id="closeSidebar">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="user-account">
+                <div class="user-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="user-info">
+                    <div class="user-name">Welcome</div>
+                    <div class="user-status">Sign in or Register</div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="sidebar-menu">
+            <li>
+                <a href="Home.html" class="menu-item active">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="favorites.html" class="menu-item">
+                    <i class="fas fa-heart"></i>
+                    <span>My Favorites</span>
+                </a>
+            </li>
+            <li>
+                <a href="my-ads.html" class="menu-item">
+                    <i class="fas fa-tag"></i>
+                    <span>My Ads</span>
+                </a>
+            </li>
+            <li>
+                <a href="messages.html" class="menu-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>Messages</span>
+                </a>
+            </li>
+            <li>
+                <a href="settings.html" class="menu-item">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </li>
+            <li>
+                <a href="help.html" class="menu-item">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Help & Support</span>
+                </a>
+            </li>
+            <li>
+                <a href="categories.html" class="menu-item">
+                    <i class="fas fa-th-large"></i>
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="trending.html" class="menu-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Trending</span>
+                </a>
+            </li>
+            <li>
+                <a href="saved-searches.html" class="menu-item">
+                    <i class="fas fa-search"></i>
+                    <span>Saved Searches</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+        <header>
+            <div class="logo">Neutron Find</div>
+            <div class="header-buttons">
+                <button class="login-btn" id="loginBtn">Login</button>
+                <button class="post-ad-btn">Post Ad</button>
+                <button class="logout-btn" id="logoutBtn" style="display: none;">Logout</button>
+            </div>
+        </header>
+
+        <!-- Add Login Modal -->
+        <div class="modal" id="loginModal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Welcome to Neutron Find</h2>
+                <form class="login-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <input type="password" placeholder="Enter your password" required>
+                    <div class="remember-forgot">
+                        <label>
+                            <input type="checkbox"> Remember me
+                        </label>
+                        <a href="#" class="forgot-password">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="sign-in-btn">Sign In</button>
+                    <p class="signup-text">Don't have an account? <a href="#" class="signup-link">Sign up</a></p>
+                </form>
+            </div>
+        </div>
+
+        <!-- Add Sign Up Modal -->
+        <div class="modal" id="signupModal">
+            <div class="modal-content">
+                <span class="close" id="closeSignup">&times;</span>
+                <h2>Create Account</h2>
+                <form class="signup-form">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="password" placeholder="Create Password" required>
+                    <input type="password" placeholder="Confirm Password" required>
+                    <button type="submit" class="sign-in-btn">Create Account</button>
+                    <p class="signup-text">Already have an account? <a href="#" class="login-link">Login</a></p>
+                </form>
+            </div>
+        </div>
+
+        <!-- Add Post Ad Modal -->
+        <div class="modal" id="postAdModal">
+            <div class="modal-content post-ad-modal">
+                <span class="close" id="closePostAd">&times;</span>
+                <h2>Post Your Ad</h2>
+                <form class="post-ad-form">
+                    <input type="text" placeholder="What are you selling?" required>
+                    <select required>
+                        <option value="">Select Category</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="vehicles">Vehicles</option>
+                        <option value="property">Property</option>
+                        <option value="jobs">Jobs</option>
+                        <option value="home-garden">Home & Garden</option>
+                        <option value="fashion">Fashion</option>
+                        <option value="sports">Sports</option>
+                        <option value="business" selected>Business Services</option>
+                    </select>
+                    <div class="price-input">
+                        <span class="currency">R</span>
+                        <input type="number" step="0.01" placeholder="0.00" required>
+                    </div>
+                    <input type="text" placeholder="City, Province" required>
+                    <textarea placeholder="Describe your item in detail..." required></textarea>
+                    <div class="image-upload">
+                        <label for="ad-images">Choose Files</label>
+                        <input type="file" id="ad-images" multiple accept="image/*">
+                        <p class="upload-status">No file chosen</p>
+                        <small>You can upload up to 5 images</small>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="button" class="clear-form-btn">Clear All</button>
+                        <button type="submit" class="post-ad-submit">Post Ad</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <section class="search-section">
+            <h1>Find Anything in South Africa</h1>
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" placeholder="What are you looking for?" class="search-input" id="searchInput">
+                    <button class="clear-search" id="clearSearch">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="location-box">
+                    <i class="fas fa-map-marker-alt location-icon"></i>
+                    <input type="text" placeholder="Location" class="location-input" id="locationInput">
+                    <button class="use-current-location" id="useLocation" title="Use current location">
+                        <i class="fas fa-crosshairs"></i>
+                    </button>
+                </div>
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                    <span>Search</span>
+                </button>
+            </div>
+
+            <!-- Search Suggestions Panel -->
+            <div class="search-suggestions" id="searchSuggestions">
+                <div class="suggestions-section recent-searches">
+                    <h3>
+                        <i class="fas fa-history"></i>
+                        Recent Searches
+                    </h3>
+                    <ul class="suggestion-list">
+                        <li><a href="#"><i class="fas fa-search"></i>iPhone 13 Pro in Cape Town</a></li>
+                        <li><a href="#"><i class="fas fa-search"></i>2 Bedroom Apartment</a></li>
+                        <li><a href="#"><i class="fas fa-search"></i>Toyota Corolla 2019</a></li>
+                    </ul>
+                </div>
+                <div class="suggestions-section popular-categories">
+                    <h3>
+                        <i class="fas fa-star"></i>
+                        Popular Categories
+                    </h3>
+                    <div class="category-tags">
+                        <a href="#" class="category-tag">Electronics</a>
+                        <a href="#" class="category-tag">Cars</a>
+                        <a href="#" class="category-tag">Property</a>
+                        <a href="#" class="category-tag">Jobs</a>
+                        <a href="#" class="category-tag">Furniture</a>
+                        <a href="#" class="category-tag">Fashion</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Location Suggestions Panel -->
+            <div class="location-suggestions" id="locationSuggestions">
+                <div class="suggestions-section">
+                    <h3>
+                        <i class="fas fa-map-marker-alt"></i>
+                        Popular Locations
+                    </h3>
+                    <ul class="suggestion-list">
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i>Cape Town</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i>Johannesburg</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i>Durban</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i>Pretoria</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories">
+            <h2>Browse Categories</h2>
+            <div class="category-grid">
+                <div class="category-item">Electronics</div>
+                <div class="category-item">Vehicles</div>
+                <div class="category-item">Property</div>
+                <div class="category-item">Jobs</div>
+                <div class="category-item">Home & Garden</div>
+                <div class="category-item">Fashion</div>
+                <div class="category-item">Sports</div>
+                <div class="category-item">Business Services</div>
+            </div>
+        </section>
+
+        <section class="featured-listings">
+            <h2>Featured Listings</h2>
+            <div class="products-grid">
+                <a href="product.html?id=1" class="product-card">
+                    <div class="product-badges">
+                        <span class="product-badge badge-featured">Featured</span>
+                        <span class="product-badge badge-new">New</span>
+                    </div>
+                    <div class="product-image">
+                        <img src="../assets/images/products/iphone13.jpg" alt="iPhone 13 Pro">
+                        <div class="product-favorite" onclick="event.stopPropagation(); toggleFavorite(this);">
+                            <i class="far fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">iPhone 13 Pro - 256GB Space Gray (Like New)</h3>
+                        <div class="product-price">R12,000</div>
+                        <div class="product-meta">
+                            <div class="product-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Cape Town
+                            </div>
+                            <div class="product-date">
+                                <i class="far fa-clock"></i>
+                                2 days ago
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product.html?id=2" class="product-card">
+                    <div class="product-badges">
+                        <span class="product-badge badge-featured">Featured</span>
+                    </div>
+                    <div class="product-image">
+                        <img src="../assets/images/products/apartment.jpg" alt="Modern Apartment">
+                        <div class="product-favorite" onclick="event.stopPropagation(); toggleFavorite(this);">
+                            <i class="far fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Modern 2 Bedroom Apartment in Sandton - Fully Furnished</h3>
+                        <div class="product-price">R8,500/month</div>
+                        <div class="product-meta">
+                            <div class="product-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Johannesburg
+                            </div>
+                            <div class="product-date">
+                                <i class="far fa-clock"></i>
+                                1 week ago
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product.html?id=3" class="product-card">
+                    <div class="product-badges">
+                        <span class="product-badge badge-featured">Featured</span>
+                        <span class="product-badge badge-sale">Sale</span>
+                    </div>
+                    <div class="product-image">
+                        <img src="../assets/images/products/toyota.jpg" alt="Toyota Corolla">
+                        <div class="product-favorite" onclick="event.stopPropagation(); toggleFavorite(this);">
+                            <i class="far fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">2019 Toyota Corolla 1.8 Exclusive - Low Mileage</h3>
+                        <div class="product-price">R185,000</div>
+                        <div class="product-meta">
+                            <div class="product-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Durban
+                            </div>
+                            <div class="product-date">
+                                <i class="far fa-clock"></i>
+                                3 days ago
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product.html?id=4" class="product-card">
+                    <div class="product-badges">
+                        <span class="product-badge badge-featured">Featured</span>
+                    </div>
+                    <div class="product-image">
+                        <img src="../assets/images/products/laptop.jpg" alt="Gaming Laptop">
+                        <div class="product-favorite" onclick="event.stopPropagation(); toggleFavorite(this);">
+                            <i class="far fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">MSI Gaming Laptop - RTX 3070, 32GB RAM, 1TB SSD</h3>
+                        <div class="product-price">R22,999</div>
+                        <div class="product-meta">
+                            <div class="product-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Pretoria
+                            </div>
+                            <div class="product-date">
+                                <i class="far fa-clock"></i>
+                                Just now
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>About Neutron Find</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Help & Support</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Safety Tips</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Popular Categories</h4>
+                    <ul>
+                        <li><a href="#">Cars</a></li>
+                        <li><a href="#">Property</a></li>
+                        <li><a href="#">Jobs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="https://www.instagram.com/neutronfind/">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                2025 Neutron Find. All rights reserved.
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

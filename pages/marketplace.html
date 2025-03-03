@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace - Browse All Listings</title>
+    <link rel="stylesheet" href="../CSS/Home.css">
+    <link rel="stylesheet" href="../CSS/marketplace.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="sidebar-open">
+    <!-- Sidebar -->
+    <aside class="sidebar active">
+        <button class="sidebar-collapse">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="user-section">
+            <div class="user-avatar">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="user-info">
+                <h3>Guest User</h3>
+                <p>Sign in to your account</p>
+            </div>
+        </div>
+
+        <nav class="nav-section">
+            <h4>Menu</h4>
+            <ul>
+                <li>
+                    <a href="home.html"><i class="fas fa-home"></i><span>Home</span></a>
+                </li>
+                <li>
+                    <a href="my-ads.html"><i class="fas fa-list"></i><span>My Ads</span></a>
+                </li>
+                <li>
+                    <a href="saved-ads.html"><i class="fas fa-heart"></i><span>Saved</span></a>
+                </li>
+                <li>
+                    <a href="messages.html"><i class="fas fa-message"></i><span>Messages</span></a>
+                </li>
+                <li class="active">
+                    <a href="marketplace.html"><i class="fas fa-store"></i><span>Marketplace</span></a>
+                </li>
+                <li>
+                    <a href="settings.html"><i class="fas fa-cog"></i><span>Settings</span></a>
+                </li>
+                <li>
+                    <a href="help-center.html"><i class="fas fa-question-circle"></i><span>Help Center</span></a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="marketplace-content">
+        <div class="marketplace-header">
+            <div class="search-bar">
+                <input type="text" placeholder="Search in marketplace..." id="searchInput">
+                <button id="searchButton"><i class="fas fa-search"></i></button>
+            </div>
+            <button class="post-ad-btn">
+                <i class="fas fa-plus"></i> Post Ad
+            </button>
+        </div>
+
+        <div class="marketplace-grid">
+            <aside class="filters-panel">
+                <!-- Categories filter -->
+                <div class="filter-section">
+                    <h3>Categories</h3>
+                    <div class="filter-options" id="categoryFilters">
+                        <label><input type="checkbox" value="electronics"> Electronics</label>
+                        <label><input type="checkbox" value="vehicles"> Vehicles</label>
+                        <label><input type="checkbox" value="property"> Property</label>
+                        <label><input type="checkbox" value="furniture"> Furniture</label>
+                        <label><input type="checkbox" value="fashion"> Fashion</label>
+                    </div>
+                </div>
+
+                <!-- Location filter -->
+                <div class="filter-section">
+                    <h3>Location</h3>
+                    <div class="filter-options" id="locationFilters">
+                        <label><input type="checkbox" value="cape-town"> Cape Town</label>
+                        <label><input type="checkbox" value="johannesburg"> Johannesburg</label>
+                        <label><input type="checkbox" value="durban"> Durban</label>
+                        <label><input type="checkbox" value="pretoria"> Pretoria</label>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="listings-section">
+                <div class="listings-header">
+                    <div class="results-info">
+                        <p>Showing <span id="resultsCount">0</span> results</p>
+                    </div>
+                    <div class="sort-options">
+                        <select id="sortSelect">
+                            <option value="recent">Most Recent</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="listings-grid" id="listingsGrid">
+                    <!-- Listings will be populated here -->
+                </div>
+
+                <div class="pagination" id="pagination">
+                    <!-- Pagination controls will be added here -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="../js/mockData.js"></script>
+    <script src="../js/marketplace.js"></script>
+    <script src="../js/sidebar.js"></script>
+</body>
+</html>

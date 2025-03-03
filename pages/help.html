@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & Support - Neutron Find</title>
+    <link rel="stylesheet" href="../CSS/Home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="../js/sidebar.js" defer></script>
+    <script src="../js/modal.js" defer></script>
+    <script src="../js/auth.js" defer></script>
+</head>
+<body>
+    <!-- Sidebar Toggle Button -->
+    <button class="sidebar-toggle" id="sidebarToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <button class="close-sidebar" id="closeSidebar">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="user-account">
+                <div class="user-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="user-info">
+                    <div class="user-name">Welcome</div>
+                    <div class="user-status">Sign in or Register</div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="sidebar-menu">
+            <li>
+                <a href="Home.html" class="menu-item">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="favorites.html" class="menu-item">
+                    <i class="fas fa-heart"></i>
+                    <span>My Favorites</span>
+                </a>
+            </li>
+            <li>
+                <a href="my-ads.html" class="menu-item">
+                    <i class="fas fa-tag"></i>
+                    <span>My Ads</span>
+                </a>
+            </li>
+            <li>
+                <a href="messages.html" class="menu-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>Messages</span>
+                </a>
+            </li>
+            <li>
+                <a href="settings.html" class="menu-item">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </li>
+            <li>
+                <a href="help.html" class="menu-item active">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Help & Support</span>
+                </a>
+            </li>
+            <li>
+                <a href="categories.html" class="menu-item">
+                    <i class="fas fa-th-large"></i>
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="trending.html" class="menu-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Trending</span>
+                </a>
+            </li>
+            <li>
+                <a href="saved-searches.html" class="menu-item">
+                    <i class="fas fa-search"></i>
+                    <span>Saved Searches</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+        <header>
+            <div class="logo">Neutron Find</div>
+            <div class="header-buttons">
+                <button class="login-btn" id="loginBtn">Login</button>
+                <button class="post-ad-btn">Post Ad</button>
+                <button class="logout-btn" id="logoutBtn" style="display: none;">Logout</button>
+            </div>
+        </header>
+
+        <section class="help-section">
+            <div class="help-container">
+                <!-- Help Navigation -->
+                <div class="help-nav">
+                    <h2>Help & Support</h2>
+                    <ul class="help-menu">
+                        <li class="active">
+                            <a href="#getting-started">
+                                <i class="fas fa-rocket"></i>
+                                Getting Started
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#account-help">
+                                <i class="fas fa-user-circle"></i>
+                                Account Help
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#buying">
+                                <i class="fas fa-shopping-cart"></i>
+                                Buying
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#selling">
+                                <i class="fas fa-store"></i>
+                                Selling
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#safety">
+                                <i class="fas fa-shield-alt"></i>
+                                Safety & Security
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact">
+                                <i class="fas fa-envelope"></i>
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Help Content -->
+                <div class="help-content">
+                    <!-- Getting Started Section -->
+                    <div class="help-panel active" id="getting-started">
+                        <h3>Getting Started with Neutron Find</h3>
+                        <div class="quick-start">
+                            <h4>Quick Start Guide</h4>
+                            <div class="step-list">
+                                <div class="step">
+                                    <div class="step-icon">
+                                        <i class="fas fa-user-plus"></i>
+                                    </div>
+                                    <div class="step-content">
+                                        <h5>Create an Account</h5>
+                                        <p>Sign up with your email or social media account to get started.</p>
+                                    </div>
+                                </div>
+                                <div class="step">
+                                    <div class="step-icon">
+                                        <i class="fas fa-search"></i>
+                                    </div>
+                                    <div class="step-content">
+                                        <h5>Browse Listings</h5>
+                                        <p>Search for items or browse categories to find what you need.</p>
+                                    </div>
+                                </div>
+                                <div class="step">
+                                    <div class="step-icon">
+                                        <i class="fas fa-camera"></i>
+                                    </div>
+                                    <div class="step-content">
+                                        <h5>Post Your First Ad</h5>
+                                        <p>Click "Post Ad" and follow the simple steps to list your item.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-section">
+                            <h4>Frequently Asked Questions</h4>
+                            <div class="faq-list">
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <i class="fas fa-plus"></i>
+                                        <span>How do I create an account?</span>
+                                    </div>
+                                    <div class="faq-answer">
+                                        Click the "Login" button and select "Sign up" to create your account. You can use your email or sign up with your social media account.
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <i class="fas fa-plus"></i>
+                                        <span>Is it free to post ads?</span>
+                                    </div>
+                                    <div class="faq-answer">
+                                        Yes, posting basic ads is completely free. We also offer premium features for better visibility.
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <i class="fas fa-plus"></i>
+                                        <span>How do I contact a seller?</span>
+                                    </div>
+                                    <div class="faq-answer">
+                                        Click on any listing and use the "Contact Seller" or "Show Phone Number" buttons to get in touch with the seller.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Us Section -->
+                    <div class="help-panel" id="contact">
+                        <h3>Contact Us</h3>
+                        <div class="contact-options">
+                            <div class="contact-card">
+                                <i class="fas fa-headset"></i>
+                                <h4>Customer Support</h4>
+                                <p>Available 24/7</p>
+                                <a href="tel:+27123456789" class="contact-button">Call Us</a>
+                            </div>
+                            <div class="contact-card">
+                                <i class="fas fa-envelope"></i>
+                                <h4>Email Support</h4>
+                                <p>Response within 24 hours</p>
+                                <a href="mailto:support@neutronfind.co.za" class="contact-button">Email Us</a>
+                            </div>
+                            <div class="contact-card">
+                                <i class="fas fa-comments"></i>
+                                <h4>Live Chat</h4>
+                                <p>Chat with our team</p>
+                                <button class="contact-button" id="startChat">Start Chat</button>
+                            </div>
+                        </div>
+
+                        <div class="contact-form">
+                            <h4>Send us a Message</h4>
+                            <form id="supportForm">
+                                <div class="form-group">
+                                    <label for="name">Your Name</label>
+                                    <input type="text" id="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">Subject</label>
+                                    <select id="subject" required>
+                                        <option value="">Select a topic</option>
+                                        <option value="account">Account Issues</option>
+                                        <option value="posting">Posting Issues</option>
+                                        <option value="technical">Technical Support</option>
+                                        <option value="safety">Safety Concerns</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="submit-button">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>About Neutron Find</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Help & Support</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Safety Tips</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Popular Categories</h4>
+                    <ul>
+                        <li><a href="#">Cars</a></li>
+                        <li><a href="#">Property</a></li>
+                        <li><a href="#">Jobs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="https://www.instagram.com/neutronfind/">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                2025 Neutron Find. All rights reserved.
+            </div>
+        </footer>
+    </div>
+</body>
+</html> 

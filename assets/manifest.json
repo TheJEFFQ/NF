@@ -1,0 +1,35 @@
+{
+    "images": {
+        "logo": "/assets/images/logo.svg",
+        "placeholder": "/assets/images/products/placeholder.jpg",
+        "defaultAvatar": "/assets/images/avatars/default.png",
+        "icons": {
+            "home": "/assets/images/icons/home.svg",
+            "search": "/assets/images/icons/search.svg",
+            "message": "/assets/images/icons/message.svg",
+            "heart": "/assets/images/icons/heart.svg",
+            "settings": "/assets/images/icons/settings.svg"
+        },
+        "banners": {
+            "home": "/assets/images/banners/home-banner.jpg",
+            "categories": "/assets/images/banners/categories-banner.jpg"
+        }
+    },
+    "fonts": {
+        "primary": {
+            "regular": "/assets/fonts/Poppins-Regular.woff2",
+            "medium": "/assets/fonts/Poppins-Medium.woff2",
+            "semibold": "/assets/fonts/Poppins-SemiBold.woff2",
+            "bold": "/assets/fonts/Poppins-Bold.woff2"
+        },
+        "secondary": {
+            "regular": "/assets/fonts/Inter-Regular.woff2",
+            "medium": "/assets/fonts/Inter-Medium.woff2"
+        }
+    },
+    "static": {
+        "favicon": "/assets/static/favicon.ico",
+        "manifest": "/assets/static/manifest.webmanifest",
+        "robots": "/assets/static/robots.txt"
+    }
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center - Marketplace</title>
+    <link rel="stylesheet" href="../CSS/Home.css">
+    <link rel="stylesheet" href="../CSS/help-center.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="sidebar-open">
+    <!-- Add Sidebar -->
+    <aside class="sidebar active">
+        <button class="sidebar-collapse">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="user-section">
+            <div class="user-avatar">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="user-info">
+                <h3>Guest User</h3>
+                <p>Sign in to your account</p>
+            </div>
+        </div>
+
+        <nav class="nav-section">
+            <h4>Menu</h4>
+            <ul>
+                <li>
+                    <a href="home.html"><i class="fas fa-home"></i><span>Home</span></a>
+                </li>
+                <li>
+                    <a href="my-ads.html"><i class="fas fa-list"></i><span>My Ads</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-heart"></i><span>Saved</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-message"></i><span>Messages</span></a>
+                </li>
+                <li class="active">
+                    <a href="help-center.html"><i class="fas fa-question-circle"></i><span>Help Center</span></a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Add Sidebar Toggle Button -->
+    <button class="sidebar-toggle" aria-label="Toggle Sidebar">
+        <i class="fas fa-indent"></i>
+    </button>
+
+    <main class="help-center">
+        <section class="help-header">
+            <h1>How can we help you?</h1>
+            <div class="help-search">
+                <input type="text" placeholder="Search help articles..." id="helpSearch">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </section>
+
+        <section class="quick-help">
+            <div class="quick-help-card">
+                <i class="fas fa-phone-alt"></i>
+                <h3>Contact Support</h3>
+                <p>Available 24/7</p>
+                <a href="tel:+27123456789">+27 12 345 6789</a>
+            </div>
+            <div class="quick-help-card">
+                <i class="fas fa-envelope"></i>
+                <h3>Email Us</h3>
+                <p>Response within 24h</p>
+                <a href="mailto:support@marketplace.com">support@marketplace.com</a>
+            </div>
+            <div class="quick-help-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Safety Center</h3>
+                <p>Stay safe while trading</p>
+                <a href="#safety">View Guidelines</a>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I post an ad?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Click the "Post Ad" button in the top right corner, fill in the required information about your item, add photos, and submit. Your ad will be reviewed and published shortly.</p>
+                    </div>
+                </div>
+                <!-- Add more FAQ items -->
+            </div>
+        </section>
+
+        <section class="resources-section">
+            <h2>Help Guides</h2>
+            <div class="resources-grid">
+                <a href="#" class="resource-card">
+                    <i class="fas fa-user-plus"></i>
+                    <h3>Getting Started</h3>
+                    <p>Learn the basics of using our marketplace</p>
+                </a>
+                <a href="#" class="resource-card">
+                    <i class="fas fa-camera"></i>
+                    <h3>Photo Guidelines</h3>
+                    <p>Tips for taking great product photos</p>
+                </a>
+                <a href="#" class="resource-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Safe Trading</h3>
+                    <p>Best practices for safe transactions</p>
+                </a>
+                <a href="#" class="resource-card">
+                    <i class="fas fa-star"></i>
+                    <h3>Seller Tips</h3>
+                    <p>How to become a successful seller</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="safety" class="safety-section">
+            <h2>Safety Guidelines</h2>
+            <div class="safety-tips">
+                <div class="safety-tip">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Meet in Public</h3>
+                    <p>Always meet in well-lit, public locations for transactions</p>
+                </div>
+                <div class="safety-tip">
+                    <i class="fas fa-user-check"></i>
+                    <h3>Verify Identity</h3>
+                    <p>Check buyer/seller profiles and reviews before meeting</p>
+                </div>
+                <div class="safety-tip">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <h3>Secure Payments</h3>
+                    <p>Use recommended payment methods and avoid suspicious offers</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/modal.js"></script>
+    <script src="../js/help-center.js"></script>
+</body>
+</html>
